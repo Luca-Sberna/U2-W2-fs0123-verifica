@@ -1,0 +1,119 @@
+@import "custom/bootstrap";
+
+*,
+:before,
+:after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary;
+}
+
+header {
+  padding: 10px 0 0 0;
+  display: grid;
+  position: sticky;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-areas: "nt mn mn sb . . . ";
+  background-color: $primary;
+  width: 100%;
+
+  .container-logo {
+    object-fit: cover;
+    width: 100px;
+    max-height: 100%;
+
+    padding-top: 0px;
+
+    .container-logo img {
+      height: 35px;
+    }
+  }
+
+  .first-nav a,
+  .second-nav a {
+    color: $light;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out, color 0.2 ease-out;
+
+    &:hover {
+      font-weight: 500;
+      color: $secondary;
+    }
+  }
+}
+
+main {
+  h2 {
+    color: $secondary;
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+  }
+  .card {
+    &:hover {
+      z-index: 100;
+      transform: scale(1.4);
+      transition: 0.5s;
+    }
+  }
+  #cont-profile {
+    width: 30rem;
+    #cont-profile-2 {
+      width: 30rem;
+    }
+  }
+  .container {
+    width: 30rem;
+  }
+}
+
+/* tutta la zona footer e link  */
+.link {
+  padding: 50px;
+}
+
+.sub-links ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.sub-links a {
+  text-decoration: none;
+  color: $gray-700;
+  text-decoration: none;
+}
+
+.sub-links a:hover {
+  font-weight: 500;
+  color: $secondary;
+}
+
+.logos a {
+  padding: 10px;
+}
+.logos i {
+  color: $gray-500;
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+.logo {
+  color: var(--dark);
+}
+
+footer {
+  text-align: left;
+  color: $gray-700;
+  button {
+    color: $gray-700;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
