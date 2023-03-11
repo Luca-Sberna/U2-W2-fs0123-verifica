@@ -8185,6 +8185,9 @@ textarea.form-control-lg {
 body {
   background-color: #141414;
 }
+body img {
+  cursor: pointer;
+}
 
 header {
   padding: 10px 0 0 0;
@@ -8192,8 +8195,9 @@ header {
   position: sticky;
   grid-template-columns: 1fr 6fr 1fr;
   grid-template-areas: "nt mn mn sb . . . ";
-  background-color: #141414;
   width: 100%;
+  top: 0;
+  z-index: 99;
 }
 header .container-logo {
   -o-object-fit: cover;
@@ -8210,11 +8214,13 @@ header .second-nav a {
   color: #f8f9fa;
   text-decoration: none;
   transition: background-color 0.2s ease-out, color 0.2 ease-out;
+  background-color: #141414;
 }
 header .first-nav a:hover,
 header .second-nav a:hover {
   font-weight: 500;
   color: white;
+  transform: scale(1.2);
 }
 
 main h2, main .h2 {
@@ -8228,13 +8234,13 @@ main .card:hover {
   transition: 0.5s;
 }
 main #cont-profile {
-  width: 30rem;
+  width: 35rem;
 }
 main #cont-profile #cont-profile-2 {
-  width: 30rem;
+  width: 35rem;
 }
 main .container {
-  width: 30rem;
+  width: 35rem;
 }
 
 /* tutta la zona footer e link  */

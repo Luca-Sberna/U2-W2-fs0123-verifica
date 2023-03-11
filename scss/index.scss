@@ -9,6 +9,7 @@
 
 body {
   background-color: $primary;
+
   img {
     cursor: pointer;
   }
@@ -20,9 +21,9 @@ header {
   position: sticky;
   grid-template-columns: 1fr 6fr 1fr;
   grid-template-areas: "nt mn mn sb . . . ";
-  background-color: $primary;
   width: 100%;
-
+  top: 0;
+  z-index: 99;
   .container-logo {
     object-fit: cover;
     width: 100px;
@@ -40,10 +41,12 @@ header {
     color: $light;
     text-decoration: none;
     transition: background-color 0.2s ease-out, color 0.2 ease-out;
+    background-color: $primary;
 
     &:hover {
       font-weight: 500;
       color: $secondary;
+      transform: scale(1.2);
     }
   }
 }
@@ -54,7 +57,6 @@ main {
     padding-top: 2rem;
     padding-bottom: 0.5rem;
   }
-
   .card {
     &:hover {
       z-index: 100;
@@ -64,59 +66,61 @@ main {
   }
   #cont-profile {
     width: 35rem;
+    #cont-profile-2 {
+      width: 35rem;
+    }
   }
-  #cont-profile-2 {
-    width: 40rem;
+  .container {
+    width: 35rem;
   }
 }
 
 /* tutta la zona footer e link  */
+
+.link {
+  padding: 50px;
+}
+
+.sub-links ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.sub-links a {
+  text-decoration: none;
+  color: $gray-700;
+  text-decoration: none;
+}
+
+.sub-links a:hover {
+  font-weight: 500;
+  color: $secondary;
+}
+
+.logos a {
+  padding: 10px;
+}
+.logos i {
+  color: $gray-500;
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+.logo {
+  color: var(--dark);
+}
+
 footer {
-  .link {
-    padding: 50px;
-  }
-
-  .sub-links ul {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .sub-links a {
-    text-decoration: none;
+  text-align: left;
+  color: $gray-700;
+  button {
     color: $gray-700;
-    text-decoration: none;
-  }
 
-  .sub-links a:hover {
-    font-weight: 500;
-    color: $secondary;
-  }
-
-  .logos a {
-    padding: 10px;
-  }
-  .logos i {
-    color: $gray-500;
-    font-size: 1.8rem;
-    padding-bottom: 1rem;
-  }
-
-  .logo {
-    color: var(--dark);
-  }
-
-  footer {
-    text-align: left;
-    color: $gray-700;
-    button {
-      color: $gray-700;
-
-      &:hover {
-        color: $secondary;
-      }
+    &:hover {
+      color: $secondary;
     }
   }
 }
