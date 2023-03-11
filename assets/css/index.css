@@ -8194,7 +8194,6 @@ header {
   display: grid;
   position: sticky;
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-areas: "nt mn mn sb . . . ";
   width: 100%;
   top: 0;
   z-index: 99;
@@ -8209,19 +8208,20 @@ header .container-logo {
 header .container-logo .container-logo img {
   height: 35px;
 }
-header .first-nav a,
-header .second-nav a {
+header .first-nav a:not(.dropdown a),
+header .second-nav a:not(.dropdown a) {
   color: #f8f9fa;
   text-decoration: none;
-  transition: background-color 0.2s ease-out, color 0.2 ease-out;
   background-color: #141414;
+  transition: 0.5s;
 }
-header .first-nav a:hover,
-header .second-nav a:hover {
-  font-weight: 500;
+header .first-nav a:not(.dropdown a):hover,
+header .second-nav a:not(.dropdown a):hover {
+  font-weight: 400;
   color: white;
   transform: scale(1.2);
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0.1rem 0rem 2rem 0.1rem #141414;
 }
 
 main h2, main .h2 {
@@ -8229,10 +8229,14 @@ main h2, main .h2 {
   padding-top: 2rem;
   padding-bottom: 0.5rem;
 }
+main .card {
+  transition: 0.5s;
+}
 main .card:hover {
   z-index: 100;
   transform: scale(1.4);
   transition: 0.5s;
+  box-shadow: 0.1rem 0rem 2rem 0.1rem #141414;
 }
 main #cont-profile {
   width: 35rem;
