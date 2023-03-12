@@ -8468,7 +8468,7 @@ main .carousel-control-next:hover {
 
 /* tutta la zona footer e link  */
 .link {
-  padding: 50px;
+  padding: 50px 50px 0 150px;
 }
 
 .sub-links ul {
