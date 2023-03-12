@@ -62,8 +62,8 @@ main {
   .card {
     transition: 0.5s;
     &:hover {
-      z-index: 100;
-      transform: scale(1.4);
+      z-index: 101;
+      transform: scale(1.1);
       transition: 0.5s;
       box-shadow: 0.1rem 0rem 2rem 0.1rem $primary;
     }
@@ -79,6 +79,17 @@ main {
   }
   a {
     color: $blue;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    height: 2rem;
+    top: 61%;
+
+    width: 0.8rem;
+    &:hover {
+      transform: scale(2.5);
+    }
   }
 }
 
